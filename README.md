@@ -12,9 +12,9 @@ For following compilers are tested:
 | Python   | `cython3` + `gcc`  | `-O2`            | 25.839                     | `time`         |
 
 
-unit: Microsoft Surface Pro 9
-system: Ubuntu 24.04 x86-64, Linux 5.15-microsoft-standard-WSL2, Windows 11
-hardware: Intel i7-1255U, 2600Mhz, 2P+8E Cores, 8GB RAM
+unit: Microsoft Surface Pro 9 \
+system: Ubuntu 24.04 x86-64, Linux 5.15-microsoft-standard-WSL2, Windows 11 \
+hardware: Intel i7-1255U, 2600Mhz, 2P+8E Cores, 8GB RAM 
 
 Note: The `.py` python script file is first converted to `.c` using `cython3`, then compiled as a standalone executable using `gcc` compiler.
 
