@@ -18,5 +18,5 @@ hardware: Intel i7-1255U, 2600Mhz, 2P+8E Cores, 8GB RAM
 
 Note: The `.py` python script file is first converted to `.c` using `cython3`, then compiled as a standalone executable using `gcc` compiler.
 
-> I tried to compile all the codes, then run them simultaneously by opening a new shell for each executable.
+> I tried to compile all the codes, then run them simultaneously by opening a new shell for each executable. \
 > Not very elegant, you might have to uncomment this option in `Makefile`.
