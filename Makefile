@@ -34,12 +34,12 @@ python: $(Psrc)
 	$(PC) $(Psrc) -o $(PCsrc) $(PFLAGS)
 	@$(PCC) $(PCsrc) -o $(Pexe) $(PCFLAGS)
 
-run: fort cpp rust python
-	bash -c "./$(Fexe)" &
-	bash -c "./$(Cexe)" &
-	bash -c "./$(Rexe)" &
-	bash -c "./$(Pexe)" &
-	@echo "press 'enter' when finished."
+# run: fort cpp rust python
+# 	bash -c "./$(Fexe)" &
+# 	bash -c "./$(Cexe)" &
+# 	bash -c "./$(Rexe)" &
+# 	bash -c "./$(Pexe)" &
+# 	@echo "press 'enter' when finished."
 
 clean:
 	rm -rf $(Fexe) $(Cexe) $(Rexe) $(PCsrc) $(Pexe)
