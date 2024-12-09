@@ -22,7 +22,7 @@ program main
   logical, external :: isprime
   call system_clock(tstart,rate)
 
-  N = 10000000
+  N = 5000000
   primes = 0
   do i=1,N
     if(isprime(i)) primes = primes + 1

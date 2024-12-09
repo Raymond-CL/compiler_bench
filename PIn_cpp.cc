@@ -14,7 +14,7 @@ int isPrime(int n) {
 int main() {
   auto start = std::chrono::high_resolution_clock::now();
 
-  int N = 10000000;
+  int N = 5000000;
   int primes = 0;
   for (int i = 0; i < N; i++) primes += isPrime(i);
 

@@ -16,7 +16,7 @@ fn isprime(n:i32)->bool{
 fn main(){
   let start = Instant::now();
 
-  let n = 10_000_000;
+  let n = 5_000_000;
   let mut primes = 0;
   for i in 1.. n{
     if isprime(i){
