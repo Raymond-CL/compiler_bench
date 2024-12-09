@@ -1,17 +1,17 @@
 FC = gfortran
 FFLAGS = -O3
 Fsrc = PIn_fort.f90
-Fexe = PIn_fort
+Fexe = PIn_fort.exe
 
 CC = g++
 CFLAGS = -O3
 Csrc = PIn_cpp.cc
-Cexe = PIn_cpp
+Cexe = PIn_cpp.exe
 
 RC = rustc
 RFLAGS = -C opt-level=3
 Rsrc = PIn_rust.rs
-Rexe = PIn_rust
+Rexe = PIn_rust.exe
 
 PC = cython3
 PFLAGS = --embed --3str
@@ -19,7 +19,7 @@ Psrc = PIn_py.py
 PCC = gcc
 PCFLAGS = $(shell python3-config --cflags --ldflags) -lpython3.12 -lpthread -lutil
 PCsrc = PIn_py.c
-Pexe = PIn_py
+Pexe = PIn_py.exe
 
 fort: $(Fsrc)
 	$(FC) $(Fsrc) -o $(Fexe) $(FFLAGS)
