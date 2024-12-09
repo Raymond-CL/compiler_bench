@@ -10,6 +10,7 @@ For following compilers are tested:
 | C++      | `g++`              | `-O3`            | 1.874                      | `chrono`       |
 | Rust     | `rustc`            | `-C opt-level=3` | 1.849                      | `Instant`      |
 | Python   | `cython3` + `gcc`  | `-O2`            | 25.839                     | `time`         |
+| Julia    | | | | |
 
 
 unit: Microsoft Surface Pro 9 \
