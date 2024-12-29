@@ -8,6 +8,11 @@ CFLAGS = -O3
 Csrc = PIn_cpp.cc
 Cexe = PIn_cpp.exe
 
+HC = ghc
+HFLAGS = -O2 -v0
+Hsrc = PIn_hask.hs
+Hexe = PIn_hask.exe
+
 RC = rustc
 RFLAGS = -C opt-level=3
 Rsrc = PIn_rust.rs
@@ -27,6 +32,9 @@ fort: $(Fsrc)
 cpp: $(Csrc)
 	$(CC) $(Csrc) -o $(Cexe) $(CFLAGS)
 
+hask: $(Hsrc)
+	$(HC) $(Hsrc) -o $(Hexe) $(HFLAGS)
+
 rust: $(Rsrc)
 	$(RC) $(Rsrc) -o $(Rexe) $(RFLAGS)
 
@@ -34,12 +42,8 @@ python: $(Psrc)
 	$(PC) $(Psrc) -o $(PCsrc) $(PFLAGS)
 	@$(PCC) $(PCsrc) -o $(Pexe) $(PCFLAGS)
 
-# run: fort cpp rust python
-# 	bash -c "./$(Fexe)" &
-# 	bash -c "./$(Cexe)" &
-# 	bash -c "./$(Rexe)" &
-# 	bash -c "./$(Pexe)" &
-# 	@echo "press 'enter' when finished."
+run: fort cpp hask rust python
+	@./$(Fexe) && ./$(Cexe) && ./$(Hexe)  && ./$(Rexe) && ./$(Pexe)
 
 clean:
-	rm -rf $(Fexe) $(Cexe) $(Rexe) $(PCsrc) $(Pexe)
+	rm -rf $(Fexe) $(Cexe) $(Hexe) $(Rexe) $(PCsrc) $(Pexe) *.o *.hi
