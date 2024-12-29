@@ -1,5 +1,11 @@
 # Executables
 *.exe
 
+# objects
+*.o
+
 # cython .c intermediate
 PIn_py.c
+
+# haskell intermediate
+*.hi
